@@ -1,0 +1,28 @@
+#include <iostream>  
+
+const int N_ELEMENTS = 100;
+
+int main()
+{
+    int *b = new int[N_ELEMENTS];                         // N_elements a konstans
+    std::cout << "1-100 ertekek duplazasa";               // Nem '', hanem" és ;
+    for (int i = 0; i < N_ELEMENTS;  i++)                 // for ciklus nem helyes
+    {
+        b[i] = i * 2;
+    }
+    for (int i = 0; i; i++)
+    {
+        std::cout << "Ertek:";                              // ; hiány
+    }    
+    std::cout << "Atlag szamitasa: " << std::endl;
+    int atlag = 0;                                              // atlag=0 ?
+    for (int i = 0; i < N_ELEMENTS; i++)
+    {
+        atlag += b[i] ;                                      // ; híány
+    }
+    atlag /= N_ELEMENTS;
+    std::cout << "Atlag: " << atlag << std::endl;
+    std::cout << "Elv. jó";
+    delete b;
+    return 0;
+}
